@@ -1,0 +1,5 @@
+{
+  "session_states": ["preparing", "blocked", "ready", "running", "stopped", "completed"],
+  "check_types": ["equipment", "operator", "material", "capacity", "emergency_staff"],
+  "material_events": ["received", "reserved", "consumed", "quarantined"]
+}
