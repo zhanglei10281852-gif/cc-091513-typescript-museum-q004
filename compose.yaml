@@ -5,6 +5,8 @@ services:
       PORT: 8000
     ports:
       - "8000:8000"
+    volumes:
+      - runtime-data:/app/.runtime
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8000/health').then(r=>{if(!r.ok)process.exit(1)})"]
       interval: 5s

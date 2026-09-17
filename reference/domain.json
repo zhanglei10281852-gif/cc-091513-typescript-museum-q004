@@ -1,5 +1,19 @@
 {
   "session_states": ["preparing", "blocked", "ready", "running", "stopped", "completed"],
   "check_types": ["equipment", "operator", "material", "capacity", "emergency_staff"],
-  "material_events": ["received", "reserved", "consumed", "quarantined"]
+  "check_items": ["script", "equipment", "operator", "material", "capacity", "emergency_staff"],
+  "system_block_items": ["incident", "session"],
+  "gate_decisions": ["go", "no_go", "running", "stopped", "completed"],
+  "block_codes": {
+    "script": ["script_not_found", "script_not_approved", "script_version_mismatch"],
+    "equipment": ["equipment_not_checked", "equipment_failed", "equipment_late"],
+    "operator": ["qualification_missing", "qualification_not_yet_valid", "qualification_expired"],
+    "material": ["material_not_scanned", "material_batch_mismatch", "batch_not_found", "material_quarantined", "material_expired", "material_insufficient"],
+    "capacity": ["venue_not_found", "attendance_not_counted", "capacity_exceeded"],
+    "emergency_staff": ["emergency_staff_missing", "emergency_staff_late"],
+    "incident": ["incident_unconfirmed", "incident_open"],
+    "session": ["stopped", "stopped_by_incident"]
+  },
+  "material_events": ["received", "reserved", "consumed", "quarantined"],
+  "permissions": ["waive:script", "waive:equipment", "waive:operator", "waive:material", "waive:capacity", "waive:emergency_staff", "waive:any", "incident:resolve", "incident:any"]
 }
